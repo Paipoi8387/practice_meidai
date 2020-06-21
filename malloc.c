@@ -16,7 +16,6 @@ int main(void)
             printf("ERROR,malloc\n");
             exit(EXIT_FAILURE);
         }
-        printf("現在%d回目のmallocです\n", i);
     }
 
     return 0;
