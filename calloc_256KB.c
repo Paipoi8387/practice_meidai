@@ -11,7 +11,7 @@ int main(void)
         // 1024個(charのサイズが1Bだとすると1024B = 1KB)のメモリを確保して0で埋める
         nmem = 1024;
         char *p;
-        p = (char *)calloc(nmem,sizeof(char));
+        p = (char *)calloc(nmem * 256,sizeof(char));
         if (p == NULL) {
             printf("ERROR,calloc\n");
             exit(EXIT_FAILURE);

@@ -8,12 +8,12 @@ int main(void)
     int nmem;
     int i;
     for (i = 1; i <= 100000; i++) {
-        // 1024個(charのサイズが1Bだとすると1024B = 1KB)のメモリを確保して0で埋める
+        // 1024個(charのサイズが1Bだとすると1024B = 1KB)のメモリを確保
         nmem = 1024;
         char *p;
-        p = (char *)calloc(nmem,sizeof(char));
+        p = (char *)malloc(sizeof(char) * nmem * 128);
         if (p == NULL) {
-            printf("ERROR,calloc\n");
+            printf("ERROR,malloc\n");
             exit(EXIT_FAILURE);
         }
     }
